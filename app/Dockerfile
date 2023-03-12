@@ -1,5 +1,5 @@
 # pull official base image
-FROM python:3.8.1-alpine
+FROM python:3.11-alpine
 
 # set environment varibles
 ENV PYTHONDONTWRITEBYTECODE 1  # Prevents Python from writing pyc files to disc
