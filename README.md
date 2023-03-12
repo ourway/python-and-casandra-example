@@ -7,13 +7,15 @@ docker-compose:
 
 ## Workflow
 
+
+```console
+make
+```
+
 _wait for one minute after docker-compose up for cassandra to start_
 
-```
-docker-compose up
-docker exec -it app python3 create_tables.py
-docker exec -it app python3 seed_db.py
-docker exec -it app python3 query.py
+```console
+make test
 ```
 
 

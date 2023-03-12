@@ -19,3 +19,8 @@ clean:
 	@docker volume prune -f
 	@docker network prune -f
 	@rm -f Dockerfile.local
+
+test:
+	@docker compose exec -it app python3 create_tables.py
+	@docker compose exec -it app python3 seed_db.py
+	@docker compose exec -it app python3 query.py
